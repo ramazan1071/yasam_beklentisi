@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:yasam_beklentisi/result_page.dart';
+import 'package:yasam_beklentisi/user_data.dart';
 
 import 'MyColumn.dart';
 import 'MyContainer.dart';
@@ -126,6 +128,25 @@ class _InputPageState extends State<InputPage> {
                 ],
               ),
             ),
+            TextButton(
+                style: TextButton.styleFrom(
+                    backgroundColor: Colors.white,
+                    fixedSize: Size.fromHeight(50)),
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => resultPage(UserData(
+                              kilo: kilo,
+                              boy: boy,
+                              seciliCinsiyet: seciliCinsiyet,
+                              sporGunu: sporGunu,
+                              icilenSigara: icilenSigara))));
+                },
+                child: Text(
+                  "Hesapla",
+                  style: kMetinStili,
+                )),
           ],
         ));
   }
