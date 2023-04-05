@@ -1,5 +1,5 @@
 class UserData {
-  String? seciliCinsiyet = null;
+  String? seciliCinsiyet;
   double icilenSigara;
   double sporGunu;
   int boy;
